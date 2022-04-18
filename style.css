@@ -12,3 +12,91 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: var(--color-neutral-main-background);
+    font-family: "Outline", sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: var(--color-neutral-card-background);
+    max-width: 70vw;
+    max-height: 70vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.image-container{
+    width: 100%;
+    max-width: 23.8rem;
+    margin: 0 auto;
+    margin-top: 4.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-image{
+    background-image: url("images/image-equilibrium.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 1000%;
+    min-height: 18.75rem;
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.card > h1{
+    color: var(--color-neutral-white);
+    text-align: left;
+    font-weight: 600;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.card > p{
+    color: var(--color-primary-soft-blue);
+    text-align: left;
+    font-weight: 300;
+    margin-top: 1.5rem;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.eth-number, .time-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.eth-number > p{
+    color: var(--color-primary-cyan);
+    font-weight: 600;
+    margin-left: .5rem;
+    font-size: .9rem;
+}
+
+.time-left > p{
+    color: var(--color-primary-soft-blue);
+    font-weight: 400;
+    margin-left: .5rem;
+    font-size: .9rem;
+}
+
+.line{
+    border-bottom: .1rem var(--color-neutral-line) solid;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
