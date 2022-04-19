@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
-:root{
+:root {
     --color-primary-soft-blue: hsl(215, 51%, 70%);
     --color-primary-cyan: hsl(178, 100%, 50%);
+    --color-primary-overlay: hsla(178, 100%, 50%, 0.6);
     --color-neutral-main-background: hsl(217, 54%, 11%);
     --color-neutral-card-background: hsl(216, 50%, 16%);
     --color-neutral-line: hsl(215, 32%, 27%);
     --color-neutral-white: hsl(0, 0%, 100%);
 }
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-body{
+body {
     background-color: var(--color-neutral-main-background);
     font-family: "Outline", sans-serif;
     display: grid;
@@ -32,41 +33,43 @@ body{
     border-radius: 2rem;
 }
 
-.image-container{
+.image-container {
     width: 100%;
     max-width: 23.8rem;
-    margin: 0 auto;
-    margin-top: 4.1rem;
     margin-bottom: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
-.main-image{
+.main-image {
     background-image: url("images/image-equilibrium.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 1000%;
+    height: 300px;
     min-height: 18.75rem;
-    width: 100%;
+    width: 390px;
     border-radius: 2rem;
 }
 
-.card > h1{
+.card > h1 {
     color: var(--color-neutral-white);
     text-align: left;
     font-weight: 600;
     width: 100%;
     font-size: 1.5rem;
+    transition: color 500ms ease;
 }
 
-.card > p{
+.card > p {
     color: var(--color-primary-soft-blue);
     text-align: left;
     font-weight: 300;
     margin-top: 1.5rem;
 }
 
-.details{
+.details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -74,29 +77,76 @@ body{
     margin-top: 2rem;
 }
 
-.eth-number, .time-left{
+.eth-number, .time-left {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.eth-number > p{
+.eth-number > p {
     color: var(--color-primary-cyan);
     font-weight: 600;
     margin-left: .5rem;
     font-size: .9rem;
 }
 
-.time-left > p{
+.time-left > p {
     color: var(--color-primary-soft-blue);
     font-weight: 400;
     margin-left: .5rem;
     font-size: .9rem;
 }
 
-.line{
+.line {
     border-bottom: .1rem var(--color-neutral-line) solid;
     width: 100%;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.author {
+    display: flex;
+    flex: row;
+    align-items: center;
+    width: 100%;
+}
+
+.author > img {
+    border: .1rem solid var(--color-neutral-white);
+    border-radius: 50%;
+    width: 40px;
+}
+
+.author > p {
+    color: var(--color-primary-soft-blue);
+    margin-left: 1rem;
+}
+
+.author > p > bold {
+    color: var(--color-neutral-white);
+    transition: color 500ms ease;
+}
+
+.author > p > bold:hover, h1:hover {
+    color: var(--color-primary-cyan);
+    cursor: pointer;
+}
+
+.color-overlay {
+    background-color: transparent;
+    height: 300px;
+    width: 380px;
+    position: absolute;
+    top: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    border-radius: 2rem;
+    z-index: 100;
+    transition: background-color 500ms ease, opacity 500ms ease;
+}
+
+.color-overlay:hover{
+    background-color: var(--color-primary-overlay);
+    opacity: 1;
 }
