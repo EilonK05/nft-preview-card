@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click Here](https://your-solution-url.com)
+- Solution URL: [Click Here](https://www.frontendmentor.io/solutions/nft-preview-card-challenge-ByfcdB24c)
 - Live Site URL: [Click Here](https://eilonk05.github.io/nft-preview-card/)
 
 ## My process
